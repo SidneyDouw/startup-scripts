@@ -5,7 +5,7 @@ set -xe
 echo "$HOME"
 HOME="/home/ubuntu"
 
-startup_scripts_folder=".startup-scripts"
+startup_scripts_folder=".startup_scripts"
 
 git clone https://github.com/SidneyDouw/startup-scripts.git "$HOME/$startup_scripts_folder" --depth 1
 
@@ -28,6 +28,15 @@ case \$1 in
 esac"
 fi
 
+before_reboot(){
+    cd "$HOME/.startup-scripts/linux"
+    ./updates.sh
+}
+
+after_reboot(){
+    ./nvm.sh
+}
+
 if [ -f /var/run/rebooting-for-updates ]; then
     after_reboot
     rm /var/run/rebooting-for-updates
@@ -39,11 +48,3 @@ else
     sudo reboot now
 fi
 
-before_reboot(){
-    cd "$HOME/.startup-scripts/linux"
-    ./updates.sh
-}
-
-after_reboot(){
-    ./nvm.sh
-}
