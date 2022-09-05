@@ -7,7 +7,7 @@ HOME="/home/ubuntu"
 
 startup_scripts_folder=".startup_scripts"
 
-git clone https://github.com/SidneyDouw/startup-scripts.git "$HOME/$startup_scripts_folder" --depth 1
+git clone https://github.com/SidneyDouw/startup-scripts.git "$HOME/$startup_scripts_folder" --depth 1 || true
 
 if [ ! -f /etc/init.d/startup_script ]; then
     echo \
