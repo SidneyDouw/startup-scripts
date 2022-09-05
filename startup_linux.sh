@@ -46,7 +46,7 @@ if [ -f /var/run/rebooting-for-updates ]; then
     update-rc.d startup-script remove
 else
     before_reboot
-    touch /var/run/rebooting-for-updates
+    sudo touch /var/run/rebooting-for-updates
     update-rc.d startup-script defaults
     sudo reboot now
 fi
