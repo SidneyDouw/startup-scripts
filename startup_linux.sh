@@ -25,8 +25,7 @@ case \$1 in
         ;;
     stop|restart|reload)
         ;;
-esac" \
-| tee /etc/init.d/startup-script
+esac" > /etc/init.d/startup-script
 fi
 
 before_reboot(){
