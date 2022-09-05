@@ -2,7 +2,10 @@
 
 set -xe
 
-apt update -y
-apt upgrade -y
+sudo apt update
 
-apt install build-essential
+# disable "pending kernel update" message and upgrade
+sed -i "s/#\$nrconf{kernelhints} = -1;/\$nrconf{kernelhints} = -1;/g" /etc/needrestart/needrestart.conf
+sudo apt upgrade -y
+
+# sudo apt install build-essential -y
