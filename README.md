@@ -1,2 +1,2 @@
 # startup-scripts
-A collection of scripts to install various softwares on blank ec2 instances
+A collection of scripts to install various software on blank instances
