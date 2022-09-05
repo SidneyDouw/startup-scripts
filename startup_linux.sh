@@ -29,7 +29,7 @@ esac"
 fi
 
 before_reboot(){
-    cd "$HOME/.startup-scripts/linux"
+    cd "$HOME/$startup_scripts_folder/linux"
     ./updates.sh
 }
 
