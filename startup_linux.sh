@@ -42,12 +42,12 @@ after_reboot(){
 
 if [ -f /var/run/rebooting-for-updates ]; then
     after_reboot
-    rm /var/run/rebooting-for-updates
-    update-rc.d startup-script remove
+    sudo rm /var/run/rebooting-for-updates
+    sudo update-rc.d startup-script remove
 else
     before_reboot
     sudo touch /var/run/rebooting-for-updates
-    update-rc.d startup-script defaults
+    sudo update-rc.d startup-script defaults
     sudo reboot now
 fi
 
