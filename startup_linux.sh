@@ -5,16 +5,16 @@ set -xe
 echo "$HOME"
 HOME="/home/ubuntu"
 
-startup_scripts_folder=".startup_scripts"
+startup_scripts_folder=".startup-scripts"
 
 git clone https://github.com/SidneyDouw/startup-scripts.git "$HOME/$startup_scripts_folder" --depth 1 || true
 
-if [ ! -f /etc/init.d/startup_script ]; then
+if [ ! -f /etc/init.d/startup-script ]; then
     echo \
 "#!/bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          startup_script
+# Provides:          startup-script
 ### END INIT INFO
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
@@ -25,7 +25,8 @@ case \$1 in
         ;;
     stop|restart|reload)
         ;;
-esac"
+esac" \
+| tee /etc/init.d/startup-script
 fi
 
 before_reboot(){
@@ -40,11 +41,11 @@ after_reboot(){
 if [ -f /var/run/rebooting-for-updates ]; then
     after_reboot
     rm /var/run/rebooting-for-updates
-    update-rc.d myupdate remove
+    update-rc.d startup-script remove
 else
     before_reboot
     touch /var/run/rebooting-for-updates
-    update-rc.d myupdate defaults
+    update-rc.d startup-script defaults
     sudo reboot now
 fi
 
