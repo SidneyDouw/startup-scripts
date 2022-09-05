@@ -25,7 +25,10 @@ case \$1 in
         ;;
     stop|restart|reload)
         ;;
-esac" > /etc/init.d/startup-script
+esac" \
+| sudo tee /etc/init.d/startup-script
+
+sudo chmod +x /etc/init.d/startup-script
 fi
 
 before_reboot(){
