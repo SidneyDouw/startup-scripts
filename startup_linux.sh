@@ -2,7 +2,6 @@
 
 set -xe
 
-echo "$HOME"
 HOME="/home/ubuntu"
 
 startup_scripts_folder=".startup-scripts"

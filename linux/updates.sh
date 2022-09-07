@@ -8,4 +8,6 @@ sudo apt update
 sudo sed -i "s/#\$nrconf{kernelhints} = -1;/\$nrconf{kernelhints} = -1;/g" /etc/needrestart/needrestart.conf
 sudo apt upgrade -y
 
+sudo reboot now
+
 # sudo apt install build-essential -y
