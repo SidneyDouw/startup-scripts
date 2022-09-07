@@ -42,11 +42,6 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# Setup
-
-rc_file="$(./util/find_rc_file.sh)"
-source "$HOME/$rc_file"
-
 # Install Node
 
 echo "Installing Node version $node_version"
@@ -54,7 +49,6 @@ echo "Installing Node version $node_version"
 if [[ $dry_run == "false" ]]; then
     [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"  # This loads nvm
     nvm install "$node_version"
-    nvm use "$node_version"
 fi
 
 # change the working directory to the previous working directory

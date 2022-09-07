@@ -23,5 +23,7 @@ echo \
 export PATH=\"$conda_path/bin:\$PATH\"" \
 | tee -a "$HOME/$rc_file"
 
+conda init bash zsh
+
 # change the working directory to the previous working directory
 cd "$PPWD"
