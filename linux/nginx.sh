@@ -30,6 +30,7 @@ while [[ $# -gt 0 ]]; do
         -d|--dry-run)
             dry_run=true
             shift
+            ./util/prepare_dryrun.sh
             ;;
         --domain)
             domain_name=$2
