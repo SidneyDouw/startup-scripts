@@ -9,7 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # Arguments
 
-dry_run=false
+dry_run="false"
 nvm_version=$(./util/git_latest_version.sh nvm-sh/nvm)
 node_version="node"
 
@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
             exit
             ;;
         -d|--dry-run)
-            dry_run=true
+            dry_run="true"
             shift
             ./util/prepare_dryrun.sh
             ;;
@@ -53,7 +53,7 @@ done
 
 echo "Installing NVM version $nvm_version to $HOME/.nvm"
 
-if ! [[ $dry_run ]]; then
+if [[ $dry_run == "false" ]]; then
     cd "$HOME"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$nvm_version/install.sh | bash
 
@@ -67,7 +67,7 @@ fi
 
 echo "Installing Node version $node_version"
 
-if ! [[ $dry_run ]]; then
+if ! [[ $dry_run == "false" ]]; then
     nvm install "$node_version"
 fi
 

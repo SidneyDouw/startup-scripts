@@ -9,7 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # Arguments
 
-dry_run=false
+dry_run="false"
 domain_name=""
 proxy_port=8080
 
@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
             exit
             ;;
         -d|--dry-run)
-            dry_run=true
+            dry_run="true"
             shift
             ./util/prepare_dryrun.sh
             ;;
@@ -57,7 +57,7 @@ if [[ $domain_name ]]; then
 fi
 echo "  with proxy server listening at localhost:$proxy_port"
 
-if [[ $dry_run ]]; then
+if [[ $dry_run == "true" ]]; then
     exit
 fi
 
