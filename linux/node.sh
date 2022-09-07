@@ -46,7 +46,7 @@ done
 
 echo "Installing Node version $node_version"
 
-if ! [[ $dry_run == "false" ]]; then
+if [[ $dry_run == "false" ]]; then
     nvm install "$node_version"
 fi
 
