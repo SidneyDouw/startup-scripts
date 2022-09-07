@@ -3,7 +3,7 @@
 set -xe
 
 if [[ $SHELL == "/usr/bin/zsh" ]]; then
-    if [[ -f "$HOME/.bashrc" ]]; then
+    if [[ -f "$HOME/.zshrc" ]]; then
         source "$HOME/.zshrc"
     else
         echo ".zshrc file not found"
