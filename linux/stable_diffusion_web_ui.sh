@@ -14,3 +14,5 @@ curl -O https://raw.githubusercontent.com/JoshuaKimsey/Linux-StableDiffusion-Scr
 curl -L -O -u "sidney@magig.de:$PW" https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
 
 chmod +x linux-sd.sh
+
+./linux-sd.sh
