@@ -44,7 +44,7 @@ done
 
 # Setup
 
-rc_file=$(./util/find_rc_file.sh)
+rc_file=./util/find_rc_file.sh
 source "$HOME/$rc_file"
 
 # Install Node
