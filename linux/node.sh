@@ -42,6 +42,11 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# Setup
+
+rc_file=$(./util/find_rc_file.sh)
+source "$HOME/$rc_file"
+
 # Install Node
 
 echo "Installing Node version $node_version"

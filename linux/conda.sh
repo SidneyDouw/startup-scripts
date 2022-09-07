@@ -14,5 +14,13 @@ bash "$conda_version" -b
 
 rm "$conda_version"
 
+rc_file=$(./util/find_rc_file.sh)
+
+echo \
+'
+# Anaconda
+export PATH="$HOME/anaconda3/bin:$PATH"' \
+| tee -a "$HOME/$rc_file"
+
 # change the working directory to the previous working directory
 cd "$PPWD"

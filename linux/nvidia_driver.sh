@@ -16,5 +16,7 @@ sudo dpkg -i cuda-keyring_1.0-1_all.deb
 sudo apt-get update
 sudo apt-get -y install cuda-drivers
 
+rm cuda-keyring_1.0-1_all.deb
+
 # change the working directory to the previous working directory
 cd "$PPWD"
