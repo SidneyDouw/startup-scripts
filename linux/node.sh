@@ -47,7 +47,7 @@ done
 echo "Installing Node version $node_version"
 
 if [[ $dry_run == "false" ]]; then
-    nvm install "$node_version"
+    . nvm install "$node_version"
 fi
 
 # change the working directory to the previous working directory
