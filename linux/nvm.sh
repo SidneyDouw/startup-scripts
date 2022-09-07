@@ -54,7 +54,6 @@ done
 echo "Installing NVM version $nvm_version to $HOME/.nvm"
 
 if [[ $dry_run == "false" ]]; then
-    cd "$HOME"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$nvm_version/install.sh | bash
 
     export NVM_DIR="$HOME/.nvm"
