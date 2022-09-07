@@ -8,3 +8,5 @@ git clone https://github.com/SidneyDouw/startup-scripts.git "$startup_scripts_fo
 
 cd "$startup_scripts_folder/linux"
 ./updates.sh
+
+sudo reboot
