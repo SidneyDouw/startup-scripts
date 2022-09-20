@@ -1,13 +1,11 @@
-#!/bin/bash
+$startup_scripts_folder = "C:\\.startup-scripts"
 
-set -xe
+git clone https://github.com/SidneyDouw/startup-scripts.git "$startup_scripts_folder" --depth 1
+# sudo chown -R ubuntu:ubuntu "$startup_scripts_folder"
 
-$startup_scripts_folder = "/home/ubuntu/.startup-scripts"
+Set-Location "$startup_scripts_folder/windows"
+# ./updates.sh
 
-git clone https://github.com/SidneyDouw/startup-scripts.git "$startup_scripts_folder" --depth 1 || true
-sudo chown -R ubuntu:ubuntu "$startup_scripts_folder"
+./test.ps1
 
-cd "$startup_scripts_folder/windows"
-./updates.sh
-
-sudo reboot
+# sudo reboot
