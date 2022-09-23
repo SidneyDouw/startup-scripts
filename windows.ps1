@@ -1,5 +1,3 @@
-<powershell>
-
 # Install chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
@@ -15,5 +13,3 @@ git clone https://github.com/SidneyDouw/startup-scripts.git "$startup_scripts_fo
 Set-Location "$startup_scripts_folder/windows"
 
 ./nvidia-driver.ps1
-
-</powershell>
