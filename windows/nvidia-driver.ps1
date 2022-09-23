@@ -13,3 +13,5 @@ foreach ($Object in $Objects) {
 }
 
 echo "run $LocalFilePath -s"
+
+Remove-Item $LocalPath -Recurse
