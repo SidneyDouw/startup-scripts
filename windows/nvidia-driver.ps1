@@ -12,6 +12,6 @@ foreach ($Object in $Objects) {
     }
 }
 
-& $LocalFilePath -s
+Start-Process "$LocalFilePath -s" -NoNewWindow -Wait
 
 Remove-Item $LocalPath -Recurse
