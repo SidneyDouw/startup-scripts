@@ -1,11 +1,11 @@
 # Add new local user, add him to Administrators
 
-# $username = "${ANSIBLE_USER}"
-# $password = "${ANSIBLE_PASSWORD}"
+$username = "ansible"
+$password = "isHgf899Sjdk8362Ok"
 
-# New-LocalUser $username -Password (ConvertTo-SecureString $password -AsPlainText -Force)
-# Set-LocalUser -Name $username -PasswordNeverExpires 1
-# Add-LocalGroupMember -Group "Administrators" -Member $username
+New-LocalUser $username -Password (ConvertTo-SecureString $password -AsPlainText -Force)
+Set-LocalUser -Name $username -PasswordNeverExpires 1
+Add-LocalGroupMember -Group "Administrators" -Member $username
 
 # setup winrm listeners
 # https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup
