@@ -12,6 +12,6 @@ foreach ($Object in $Objects) {
     }
 }
 
-$LocalFilePath -s | Wait-Process
+Invoke-Expression -Command "$LocalFilePath -s"
 
-Remove-Item $LocalPath -Recurse
+# Remove-Item $LocalPath -Recurse
