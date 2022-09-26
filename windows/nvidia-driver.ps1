@@ -13,5 +13,3 @@ foreach ($Object in $Objects) {
 }
 
 Invoke-Expression -Command "$LocalFilePath -s"
-
-# Remove-Item $LocalPath -Recurse
