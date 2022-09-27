@@ -12,4 +12,7 @@ foreach ($Object in $Objects) {
     }
 }
 
-Invoke-Expression "$($LocalFilePath -s ) | Out-Null"
+$full_cmd="$LocalFilePath -s"
+Invoke-Expression "$($full_cmd) | Out-Null"
+
+Remove-Item -Recurse $LocalPath
