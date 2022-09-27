@@ -14,3 +14,5 @@ console.log('Node.js web server at port 8080 is running..')
 
 pm2 start "C:\server.js"
 pm2 save
+
+New-NetFirewallRule -DisplayName "ALLOW TCP PORT 8080" -Direction inbound -Profile Any -Action Allow -LocalPort 8080 -Protocol TCP
