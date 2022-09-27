@@ -12,4 +12,4 @@ foreach ($Object in $Objects) {
     }
 }
 
-Invoke-Expression -Command "$LocalFilePath -s"
+Invoke-Expression "$($LocalFilePath -s ) | Out-Null"
