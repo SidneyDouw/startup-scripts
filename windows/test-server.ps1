@@ -5,7 +5,7 @@ npm install -g pm2
 Set-Content -Path 'C:\server.js' -Value "var http = require('http');
 var server = http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.write('<html><body><p>Pixelstreamer instance is ready</p></body></html>');
+    res.write('<html><body><p>Serveris ready</p></body></html>');
     res.end();
 });
 server.listen(8080)
