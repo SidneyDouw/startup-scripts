@@ -1,7 +1,5 @@
 # Add new local user, add him to Administrators
-# TODO: parameterize
-$username = "user"
-$password = "Password#"
+param ( [int]$username, [string]$password)
 
 New-LocalUser $username -Password (ConvertTo-SecureString $password -AsPlainText -Force)
 Set-LocalUser -Name $username -PasswordNeverExpires 1
