@@ -1,4 +1,5 @@
 # Add new local user, add him to Administrators
+# TODO: parameterize
 $username = "user"
 $password = "Password#"
 
