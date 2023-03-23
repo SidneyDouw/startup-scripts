@@ -5,5 +5,5 @@ $home_dir = "C:\Users\$username"
 
 New-LocalUser $username -Password (ConvertTo-SecureString $password -AsPlainText -Force)
 New-Item -Path $home_dir -ItemType Directory
-Set-LocalUser -Name $username -PasswordNeverExpires 1 -HomeDirectory $home_dir
+Set-LocalUser -Name $username -PasswordNeverExpires 1
 Add-LocalGroupMember -Group "Administrators" -Member $username
