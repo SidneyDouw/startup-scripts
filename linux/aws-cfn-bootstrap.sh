@@ -4,11 +4,11 @@ set -xe
 
 PPWD=$(pwd)
 
-HOME="/home/ubuntu/"
-cd "$HOME"
+cd "/home/ubuntu/"
 
 wget https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.tar.gz
 tar -zxvf aws-cfn-bootstrap-py3-latest.tar.gz
+rm aws-cfn-bootstrap-py3-latest.tar.gz
 
 cd aws-cfn-bootstrap-*
 sudo easy_install .
