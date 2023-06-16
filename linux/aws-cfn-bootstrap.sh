@@ -4,6 +4,7 @@ set -xe
 
 PPWD=$(pwd)
 
+HOME="/home/ubuntu/"
 cd "$HOME"
 
 wget https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.tar.gz

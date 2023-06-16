@@ -7,6 +7,8 @@ PPWD=$(pwd)
 # change the working directory to the location of this script
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+HOME="/home/ubuntu/"
+
 # Install Zsh
 
 sudo apt install zsh -y
